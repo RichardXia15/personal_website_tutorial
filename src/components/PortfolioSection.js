@@ -90,7 +90,7 @@ function PortfolioCardTitle(props) {
 
 function GithubCard(props) {
     return (
-        <Col sm={{ size: 4 }}>
+        <Col sm={{ size: 4 }} className="card-padding">
             <a href={props.project.html_url} target="_blank">
                 <Card className="portfolio-card">
                     <CardBody>
@@ -99,7 +99,6 @@ function GithubCard(props) {
                     </CardBody>
                 </Card>
             </a>
-            
        </Col>
     )
 }
