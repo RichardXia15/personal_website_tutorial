@@ -22,7 +22,7 @@ h4 {
     padding-top: 25px;
     padding-bottom: 25px;
 }
-i {
+.icon-box {
     border-style: solid;
     border-radius: 5px;
     padding: 12px 5px 5px 5px;
@@ -30,6 +30,6 @@ i {
     width: 75px;
     color: white;
 }
-i:hover {
+.icon-box:hover {
     color: lightgrey;
 }
