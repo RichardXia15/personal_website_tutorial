@@ -16,7 +16,7 @@ class HeaderSection extends Component {
                     &lt; your titles here &gt;
                 </h1>
                 <h1>
-                    &lt; and here here &gt;
+                    &lt; here and here &gt;
                 </h1>
             </div>
         )
