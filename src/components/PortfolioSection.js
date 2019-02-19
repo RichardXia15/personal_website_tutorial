@@ -15,6 +15,7 @@ class PortfolioSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            github_username: props.github_username,
             projects: [],
             isLoading: false,
             error: null
@@ -24,7 +25,7 @@ class PortfolioSection extends Component {
     componentDidMount() {
         this.setState({ isLoading: true });
 
-        fetch('https://api.github.com/users/richardxia15/repos')
+        fetch('https://api.github.com/users/'+ this.state.github_username +'/repos')
         .then(response => {
             if(response.ok) {
                 return response.json();
@@ -53,7 +54,10 @@ class PortfolioSection extends Component {
         if(error) {
             return (
                 <div>
-                    An Error has occurred.
+                    <PortfolioCardTitle/>
+                    <h1>
+                        An Error has occured please check your username in the app.js
+                    </h1>
                 </div>
             );
         }

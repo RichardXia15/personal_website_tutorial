@@ -4,17 +4,19 @@ import '../styles/HeaderSection.css';
 class HeaderSection extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            name: props.name
+        };
     }
     render() {
         return (
             <div>
-                <div className="introduction">Hello my name is <b>Richard</b> and I am a </div>
+                <div className="introduction">Hello my name is <b>{this.state.name}</b> and I am a </div>
                 <h1>
-                    full stack web developer 
+                    &lt; your titles here &gt;
                 </h1>
                 <h1>
-                    analyst and student
+                    &lt; and here here &gt;
                 </h1>
             </div>
         )

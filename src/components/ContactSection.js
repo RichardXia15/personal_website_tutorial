@@ -41,9 +41,7 @@ function ContactSectionContent(props) {
     return (
         <div>
             <h4>
-                Feel free to drop me a line if you have any work/projects
-                that you think I might be interested in or if you just want to 
-                get in touch. You can reach me at richardxia15@gmail.com
+                &lt; let the people know how to get in contact with you &gt;
            </h4>
         </div>
     );

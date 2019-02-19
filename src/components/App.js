@@ -9,17 +9,25 @@ import ContactSection from './ContactSection';
 import FooterSection from './FooterSection';
 
 class App extends Component {
+    name = "<your name here>";
+    linkedin = "https://www.linkedin.com/";
+    github = "https://github.com/";
+    github_username = "<your_user_name_here>";
+    facebook = "https://facebook.com/";
+    twitter = "https://twitter.com/";
+
     render() {
         return (
             <div className="App">
-                <MyNav/>
+                <MyNav name={this.name} github={this.github} linkedin={this.linkedin}/>
                 <header className="App-header Header-background">
-                    <HeaderSection/>
+                    <HeaderSection name={this.name}/>
                 </header>
                 <AboutSection/>
-                <PortfolioSection/>
+                <PortfolioSection github_username={this.github_username}/>
                 <ContactSection/>
-                <FooterSection/>
+                <FooterSection linkedin={this.linkedin} github={this.github}
+                    facebook={this.facebook} twitter={this.twitter}/>
             </div>
         );
     }

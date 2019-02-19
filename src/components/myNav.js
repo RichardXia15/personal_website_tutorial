@@ -16,7 +16,10 @@ class MyNav extends Component {
     
         this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            name: props.name,
+            linkedin: props.linkedin,
+            github: props.github
         };
     }
     toggle() {
@@ -25,18 +28,19 @@ class MyNav extends Component {
         });
     }
     render() {
+
         return (
             <div>
                 <Navbar fixed="top" color="dark" expand="md">
-                    <NavbarBrand href="/">Richard Xia</NavbarBrand>
+                    <NavbarBrand href="/">{this.state.name}</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="bar-item" href="https://www.linkedin.com/">Linkedin</NavLink>
+                                <NavLink className="bar-item" href={this.state.linkedin} target="_blank">Linkedin</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="bar-item" href="https://github.com/RichardXia15" target="_blank">GitHub</NavLink>
+                                <NavLink className="bar-item" href={this.state.github} target="_blank">GitHub</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

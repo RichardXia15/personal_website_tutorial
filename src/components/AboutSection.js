@@ -29,23 +29,19 @@ class AboutSection extends Component {
                             <SkillCard
                                 icon="fa fa-university"
                                 title="Student"
-                                text="Currently studying computer engineering at UTD.
-                                Expected graduation is Spring 2019."/>
+                                text="< talk a little about your academics here >"/>
                             <SkillCard
-                                icon="fa fa-window-restore"
-                                title="Front End Experience"
-                                text="Worked with various technologies such as React, Angular,
-                                and Django"/>
+                                icon="fa fa-question"
+                                title="<title or occupation>"
+                                text="< description >"/>
                             <SkillCard
-                                icon="fa fa-database"
-                                title="Back End Experience"
-                                text="Worked with different back end solutions such as Node,
-                                Entity Framework, and .NET CORE"/>
+                                icon="fa fa-question"
+                                title="<title or occupation>"
+                                text="< description >"/>
                             <SkillCard
-                                icon="fa fa-window-restore"
-                                title="Analytics"
-                                text="I have 1 year experience working with in analytics of truck
-                                driving data from the FMCSA."/>
+                                icon="fa fa-question"
+                                title="<title or occupation>"
+                                text="< description >"/>
                         </Row>
                     </Container>
                 </div>
@@ -66,9 +62,8 @@ function AboutCardContent(props) {
     return (
         <div>
             <h4>
-                I'm currently a student at the University of Texas at Dallas.
-                Previously, I've worked to build enterprise level solutions
-                for companies in both the public and private sectors.
+                &lt; Write a quick blurb here about yourself. Let us know a little
+                more about who you are what you've done what you are interested in &gt;
             </h4>
         </div>
     );

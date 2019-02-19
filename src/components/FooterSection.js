@@ -10,6 +10,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 class FooterSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            linkedin: props.linkedin,
+            github: props.github,
+            facebook: props.facebook,
+            twitter: props.twitter
+        };
+    }
     render() {
         return (
             <div className="footer-section">
@@ -17,22 +26,22 @@ class FooterSection extends Component {
                     <Container>
                         <Row className="row-padding">
                             <Col sm={{ offset: 4, size: 1 }}>
-                                <a href="https://twitter.com/" target="_blank">
+                                <a href={this.state.twitter} target="_blank">
                                     <i className="fa fa-twitter fa-3x icon-box"></i>
                                 </a>
                             </Col>
                             <Col sm={{ size: 1 }}>
-                                <a href="https://facebook.com/" target="_blank">
+                                <a href={this.state.facebook} target="_blank">
                                     <i className="fa fa-facebook fa-3x icon-box"></i>
                                 </a>
                             </Col>
                             <Col sm={{ size: 1 }}>
-                                <a href="https://www.linkedin.com/" target="_blank">
+                                <a href={this.state.linkedin} target="_blank">
                                     <i className="fa fa-linkedin fa-3x icon-box"></i>
                                 </a>
                             </Col>
                             <Col sm={{ size: 1 }}>
-                                <a href="https://github.com/RichardXia15" target="_blank">
+                                <a href={this.state.github} target="_blank">
                                     <i className="fa fa-github fa-3x icon-box"></i>
                                 </a>
                             </Col>
