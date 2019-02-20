@@ -24,7 +24,6 @@ class PortfolioSection extends Component {
 
     componentDidMount() {
         this.setState({ isLoading: true });
-
         fetch('https://api.github.com/users/'+ this.state.github_username +'/repos')
         .then(response => {
             if(response.ok) {
@@ -54,10 +53,18 @@ class PortfolioSection extends Component {
         if(error) {
             return (
                 <div>
-                    <PortfolioCardTitle/>
-                    <h1>
-                        An Error has occured please check your username in the app.js
-                    </h1>
+                    <Container>
+                        <Row className="row-padding">
+                            <Col sm={{ size: 6, offset: 3 }}>
+                                <PortfolioCardTitle/>
+                            </Col>
+                        </Row>
+                        <Row className="row-padding">
+                        <h1>
+                            An Error has occured please check your username in the app.js
+                        </h1>
+                        </Row>
+                    </Container>
                 </div>
             );
         }
